@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0B1F33;
+  --secondary: #123B5D;
+  --accent: #D99A3D;
+  --background: #F0F2F5;
+  --surface: #FFFFFF;
+  --text: #111827;
+  --muted: #667085;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-inter);
+  --animate-marquee: marquee 120s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 120s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
+  @keyframes marquee-reverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+}
+
+body {
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(210, 40%, 93%, 1) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, hsla(38, 50%, 91%, 1) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, hsla(210, 40%, 93%, 1) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
