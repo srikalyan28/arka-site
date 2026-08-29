@@ -98,15 +98,13 @@ export default function LeadsPage() {
                   <th className="p-4 font-semibold">Date</th>
                   <th className="p-4 font-semibold">Name</th>
                   <th className="p-4 font-semibold">Contact</th>
-                  <th className="p-4 font-semibold">Profile</th>
                   <th className="p-4 font-semibold">Preferences</th>
-                  <th className="p-4 font-semibold">Message</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {leads.length === 0 ? (
                   <tr>
-                    <td colSpan={6} className="p-8 text-center text-gray-500">
+                    <td colSpan={4} className="p-8 text-center text-gray-500">
                       No leads found in the database.
                     </td>
                   </tr>
@@ -126,15 +124,8 @@ export default function LeadsPage() {
                         <div className="text-sm text-gray-500">{lead.phone}</div>
                       </td>
                       <td className="p-4 align-top">
-                        <div className="text-sm text-gray-900">{lead.education || "-"}</div>
-                        <div className="text-xs text-gray-500">Age: {lead.age || "-"}</div>
-                      </td>
-                      <td className="p-4 align-top">
                         <div className="text-sm text-gray-900 font-medium">{lead.preferredCountry || "-"}</div>
                         <div className="text-xs text-gray-500 line-clamp-2 max-w-[150px]">{lead.preferredCourse || "-"}</div>
-                      </td>
-                      <td className="p-4 align-top">
-                        <p className="text-sm text-gray-600 line-clamp-3 max-w-[250px]">{lead.message || "-"}</p>
                       </td>
                     </tr>
                   ))

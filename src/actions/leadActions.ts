@@ -1,10 +1,44 @@
 "use server";
 
+import fs from 'fs/promises';
+import path from 'path';
 import dbConnect from "@/lib/db";
 import Lead from "@/models/Lead";
 
 export async function submitLead(formData: FormData) {
   try {
+    if (!process.env.MONGODB_URI) {
+      console.warn("MONGODB_URI is not defined. Using local file storage.");
+      const filePath = path.join(process.cwd(), 'leads.json');
+      let leads = [];
+      try {
+        const fileData = await fs.readFile(filePath, 'utf-8');
+        leads = JSON.parse(fileData);
+      } catch (e) {
+        // file doesn't exist yet
+      }
+      const data = {
+        _id: Date.now().toString(),
+        name: formData.get("name"),
+        phone: formData.get("phone"),
+        email: formData.get("email"),
+        age: formData.get("age"),
+        education: formData.get("education"),
+        preferredCountry: formData.get("preferredCountry"),
+        preferredCourse: formData.get("preferredCourse"),
+        budget: formData.get("budget"),
+        intake: formData.get("intake"),
+        message: formData.get("message"),
+        source: "Book Consultation Page",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+      leads.unshift(data);
+      await fs.writeFile(filePath, JSON.stringify(leads, null, 2));
+
+      return { success: true, message: "Your counselling session has been requested successfully!" };
+    }
+
     await dbConnect();
 
     const data = {
@@ -32,13 +66,29 @@ export async function submitLead(formData: FormData) {
 }
 
 export async function getLeads(passcode: string) {
-  const correctPasscode = process.env.LEADS_PASSCODE || "Arka2026";
+  const correctPasscode = process.env.LEADS_PASSCODE || "1234";
   
   if (passcode !== correctPasscode) {
     return { success: false, message: "Invalid passcode" };
   }
 
   try {
+    if (!process.env.MONGODB_URI) {
+      console.warn("MONGODB_URI is not defined. Using local file storage.");
+      const filePath = path.join(process.cwd(), 'leads.json');
+      let leads = [];
+      try {
+        const fileData = await fs.readFile(filePath, 'utf-8');
+        leads = JSON.parse(fileData);
+      } catch (e) {
+        // file doesn't exist yet
+      }
+      return {
+        success: true,
+        leads: leads
+      };
+    }
+
     await dbConnect();
     // Use lean() for better performance and to convert mongoose docs to plain objects
     // Need to serialize the _id and createdAt to string to pass to client

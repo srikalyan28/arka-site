@@ -33,7 +33,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-gray-200">
               {/* Note: Update to use Next Image later */}
               <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                <Image src="/images/about.png" alt="Counsellor helping a student" fill className="object-cover" />
+                <Image src="/images/about_abstract.jpg" alt="Abstract global education concept" fill className="object-cover" />
               </div>
             </div>
             <div className="space-y-6">
@@ -84,7 +84,7 @@ export default function AboutPage() {
             <p className="text-lg text-[var(--muted)]">The people behind your success.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-12 max-w-5xl mx-auto">
             {team.map((member) => (
               <div key={member.id} className="group text-center">
                 <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200 border-4 border-[var(--background)] group-hover:border-[var(--accent)] transition-colors">

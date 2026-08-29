@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  /* Original colors (kept for easy revert) */
+  /*
   --primary: #0B1F33;
   --secondary: #123B5D;
   --accent: #D99A3D;
@@ -8,6 +10,16 @@
   --surface: #FFFFFF;
   --text: #111827;
   --muted: #667085;
+  */
+
+  /* New Client Requested Palette: Blues, Sky Blues, and Golden */
+  --primary: #1D4ED8; /* Deep Blue */
+  --secondary: #0EA5E9; /* Sky Blue */
+  --accent: #F59E0B; /* Golden */
+  --background: #F0F9FF; /* Light Sky Blue tinted background */
+  --surface: #FFFFFF;
+  --text: #0F172A; /* Slate 900 */
+  --muted: #64748B; /* Slate 500 */
 }
 
 @theme inline {

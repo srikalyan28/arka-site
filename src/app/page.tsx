@@ -122,10 +122,10 @@ export default function Home() {
           {[...Array(6)].map((_, i) => (
             <div key={i} className="flex flex-shrink-0 items-center justify-around px-4">
               {[
-                { count: '10k+', label: 'Successful Students' },
+                { count: '1000+', label: 'Successful Students' },
                 { count: '12+', label: 'Years of Experience' },
                 { count: '8', label: 'Top Countries' },
-                { count: '500+', label: 'University Partners' },
+                { count: '600+', label: 'University Partners' },
               ].map((stat, index) => (
                 <div key={index} className="flex items-center gap-4 mx-8 md:mx-16">
                   <span className="text-4xl md:text-5xl font-bold text-[var(--primary)] whitespace-nowrap">{stat.count}</span>
