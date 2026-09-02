@@ -100,13 +100,11 @@ export default async function CountryDetailPage({ params }: Props) {
               <div>
                 <h2 className="text-3xl font-bold text-[var(--primary)] mb-6">Why Study in {country.name}?</h2>
                 <div className="prose prose-lg text-gray-600 max-w-none">
-                  <p>
-                    Choosing to study in {country.name} opens up a world of opportunities. Known for its robust education system and diverse culture, it has consistently been a top choice for international students. 
-                    The universities here are globally recognized for their innovative teaching methods, state-of-the-art facilities, and strong emphasis on research and practical learning.
-                  </p>
-                  <p className="mt-4">
-                    Beyond academics, {country.name} offers a vibrant student life. You&apos;ll have the chance to experience a new culture, build a global network, and develop skills that are highly valued by employers worldwide.
-                  </p>
+                  {country.whyStudy?.map((paragraph, index) => (
+                    <p key={index} className={index > 0 ? "mt-4" : ""}>
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               </div>
 
