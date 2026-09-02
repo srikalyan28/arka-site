@@ -54,7 +54,7 @@ export default function Footer() {
                 { name: "About Us", href: "/about" },
                 { name: "Our Services", href: "/services" },
                 { name: "Courses", href: "/courses" },
-                { name: "Success Stories", href: "/success-stories" },
+                // { name: "Success Stories", href: "/success-stories" }, // Hidden for now
                 { name: "Blog", href: "/blog" },
                 { name: "FAQ", href: "/faq" },
                 { name: "Contact", href: "/contact" },

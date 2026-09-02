@@ -31,7 +31,7 @@ export default function Navbar() {
   ];
 
   const moreLinks = [
-    { name: "Success Stories", href: "/success-stories" },
+    // { name: "Success Stories", href: "/success-stories" }, // Hidden for now
     { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
   ];
