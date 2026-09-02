@@ -13,13 +13,13 @@ export default function AboutPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-[var(--background)]">
+      <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 bg-[var(--background)]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--primary)] mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--primary)] mb-4">
               Helping students turn global ambitions into real opportunities.
             </h1>
-            <p className="text-lg md:text-xl text-[var(--muted)] leading-relaxed">
+            <p className="text-base md:text-lg text-[var(--muted)] leading-relaxed">
               We are a team of passionate educators and international education experts dedicated to guiding students toward their academic and professional dreams.
             </p>
           </div>
@@ -27,7 +27,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission */}
-      <section className="py-16 md:py-24 border-t border-gray-100">
+      <section className="py-12 md:py-16 border-t border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-gray-200">
