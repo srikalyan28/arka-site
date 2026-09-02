@@ -9,7 +9,7 @@ export const team = [
   {
     id: "team-2",
     name: "Vallabhu bindu bhargavi",
-    role: "Founder and Head Counsellor",
+    role: "Founder and Managing Director",
     bio: "Specializes in profile building and course selection, helping students align their academic backgrounds with future career goals.",
     image: "placeholder"
   }
