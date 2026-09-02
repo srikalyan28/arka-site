@@ -10,7 +10,7 @@ export default function Home() {
       <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-transparent">
 
         {/* Abstract Background GFX (Orbits, Flight Paths, Planes) */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 hidden md:block">
           <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
             {/* Whorl Tail 1 - Dotted */}
             <path d="M -50 200 C 150 200, 200 400, 400 350 S 500 100, 650 150" fill="none" stroke="var(--primary)" strokeWidth="3" strokeDasharray="4 8" opacity="0.2" />
@@ -23,22 +23,11 @@ export default function Home() {
           </svg>
 
           {/* Solid Icons placed at the end of tails or scattered */}
-          {/* Plane 1 */}
           <Plane className="absolute top-[130px] left-[650px] w-10 h-10 text-[var(--accent)] -rotate-12 drop-shadow-xl" fill="currentColor" />
-          
-          {/* Plane 2 */}
           <Plane className="absolute top-[600px] left-[200px] w-8 h-8 text-[var(--primary)] rotate-[120deg] drop-shadow-xl" fill="currentColor" />
-          
-          {/* Plane 3 */}
           <Plane className="absolute top-[850px] left-[1050px] w-12 h-12 text-[var(--primary)] -rotate-[20deg] drop-shadow-xl" fill="currentColor" />
-          
-          {/* Scattered Book */}
           <BookOpen className="absolute top-[80px] left-[350px] w-10 h-10 text-[var(--primary)] drop-shadow-xl animate-bounce-slow" fill="currentColor" />
-          
-          {/* Scattered Pen */}
           <PenTool className="absolute top-[250px] left-[850px] w-8 h-8 text-[var(--accent)] drop-shadow-xl animate-pulse" fill="currentColor" />
-
-          {/* Scattered Globe */}
           <Globe2 className="absolute top-[700px] left-[500px] w-14 h-14 text-[var(--accent)] drop-shadow-xl animate-[spin_20s_linear_infinite]" fill="currentColor" />
         </div>
 
@@ -48,7 +37,7 @@ export default function Home() {
               <div className="mb-2">
                 <Image src="/logo-transparent.png" alt="ARKA ABROAD Logo" width={350} height={350} className="w-48 md:w-72 h-auto object-contain drop-shadow-2xl" priority />
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--primary)] leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--primary)] leading-[1.1]">
                 Your Future <br />
                 <span className="text-[var(--accent)]">Has No Borders.</span>
               </h1>
@@ -83,15 +72,15 @@ export default function Home() {
                 />
 
                 {/* Embedded Stats Overlay */}
-                <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-12 z-10 pointer-events-none">
+                <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 flex justify-center gap-6 sm:gap-12 z-10 pointer-events-none">
                   <div className="text-center drop-shadow-sm">
-                    <div className="text-4xl md:text-5xl font-black text-[var(--primary)]">70+</div>
-                    <div className="text-sm font-bold text-[var(--primary)] uppercase tracking-widest mt-1 opacity-90">Countries</div>
+                    <div className="text-2xl sm:text-4xl md:text-5xl font-black text-[var(--primary)]">70+</div>
+                    <div className="text-xs sm:text-sm font-bold text-[var(--primary)] uppercase tracking-widest mt-1 opacity-90">Countries</div>
                   </div>
-                  <div className="w-px bg-[var(--primary)]/20 h-12 self-center"></div>
+                  <div className="w-px bg-[var(--primary)]/20 h-8 sm:h-12 self-center"></div>
                   <div className="text-center drop-shadow-sm">
-                    <div className="text-4xl md:text-5xl font-black text-[var(--primary)]">600+</div>
-                    <div className="text-sm font-bold text-[var(--primary)] uppercase tracking-widest mt-1 opacity-90">Universities</div>
+                    <div className="text-2xl sm:text-4xl md:text-5xl font-black text-[var(--primary)]">600+</div>
+                    <div className="text-xs sm:text-sm font-bold text-[var(--primary)] uppercase tracking-widest mt-1 opacity-90">Universities</div>
                   </div>
                 </div>
               </div>
@@ -101,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* Credibility & Brands Strip */}
-      <section className="border-y border-gray-100 bg-white py-12 overflow-hidden flex flex-col gap-12">
+      <section className="border-y border-gray-100 bg-white py-6 sm:py-12 overflow-hidden flex flex-col gap-6 sm:gap-12">
 
         {/* Universities Marquee */}
         <div className="flex w-max animate-marquee items-center group hover:[animation-play-state:paused]">
@@ -109,7 +98,7 @@ export default function Home() {
             <div key={i} className="flex flex-shrink-0 items-center justify-around px-4">
               {['Harvard University', 'Oxford University', 'Stanford University', 'MIT', 'University of Toronto', 'Imperial College London', 'University of Melbourne', 'ETH Zurich'].map((uni) => (
                 <div key={uni} className="flex items-center gap-8 mx-4 md:mx-8">
-                  <span className="text-xl md:text-2xl font-extrabold text-gray-800 whitespace-nowrap">{uni}</span>
+                  <span className="text-base sm:text-xl md:text-2xl font-extrabold text-gray-800 whitespace-nowrap">{uni}</span>
                   <span className="text-[var(--accent)] text-2xl">•</span>
                 </div>
               ))}
@@ -127,9 +116,9 @@ export default function Home() {
                 { count: '8', label: 'Top Countries' },
                 { count: '600+', label: 'University Partners' },
               ].map((stat, index) => (
-                <div key={index} className="flex items-center gap-4 mx-8 md:mx-16">
-                  <span className="text-4xl md:text-5xl font-bold text-[var(--primary)] whitespace-nowrap">{stat.count}</span>
-                  <span className="text-sm md:text-base text-[var(--muted)] font-medium whitespace-nowrap uppercase tracking-wider">{stat.label}</span>
+                <div key={index} className="flex items-center gap-2 sm:gap-4 mx-4 sm:mx-8 md:mx-16">
+                  <span className="text-2xl sm:text-4xl md:text-5xl font-bold text-[var(--primary)] whitespace-nowrap">{stat.count}</span>
+                  <span className="text-xs sm:text-sm md:text-base text-[var(--muted)] font-medium whitespace-nowrap uppercase tracking-wider">{stat.label}</span>
                 </div>
               ))}
             </div>
@@ -154,7 +143,7 @@ export default function Home() {
                   <img
                     src={`https://flagcdn.com/${country.code}.svg`}
                     alt={country.alt}
-                    className="w-20 md:w-24 h-auto shadow-sm rounded-sm hover:scale-110 transition-transform cursor-default"
+                    className="w-12 sm:w-20 md:w-24 h-auto shadow-sm rounded-sm hover:scale-110 transition-transform cursor-default"
                     loading="lazy"
                   />
                 </div>

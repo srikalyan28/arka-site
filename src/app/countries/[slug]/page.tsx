@@ -30,7 +30,7 @@ export default async function CountryDetailPage({ params }: Props) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-[var(--primary)] text-white overflow-hidden">
+      <section className="relative pt-24 pb-16 md:pt-40 md:pb-32 bg-[var(--primary)] text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] z-0"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 z-0"></div>
         
@@ -44,11 +44,11 @@ export default async function CountryDetailPage({ params }: Props) {
           </div>
           
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Study in {country.name}</h1>
-            <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">Study in {country.name}</h1>
+            <p className="text-base md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8">
               {country.description}
             </p>
-            <Link href="/book-consultation" className="inline-flex items-center justify-center bg-[var(--accent)] text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-yellow-600 transition-colors shadow-lg shadow-[var(--accent)]/20">
+            <Link href="/book-consultation" className="inline-flex items-center justify-center bg-[var(--accent)] text-white px-6 py-3 md:px-8 md:py-4 rounded-md font-semibold text-base md:text-lg hover:bg-yellow-600 transition-colors shadow-lg shadow-[var(--accent)]/20">
               Talk to a Counsellor
             </Link>
           </div>
@@ -64,28 +64,28 @@ export default async function CountryDetailPage({ params }: Props) {
                 <DollarSign className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Tuition (Avg)</span>
               </div>
-              <p className="font-bold text-[var(--primary)]">{country.facts.tuition}</p>
+              <p className="font-bold text-[var(--primary)] text-sm md:text-base break-words">{country.facts.tuition}</p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-gray-500 mb-1">
                 <Clock className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Duration</span>
               </div>
-              <p className="font-bold text-[var(--primary)]">{country.facts.duration}</p>
+              <p className="font-bold text-[var(--primary)] text-sm md:text-base">{country.facts.duration}</p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-gray-500 mb-1">
                 <Calendar className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Intakes</span>
               </div>
-              <p className="font-bold text-[var(--primary)]">{country.facts.intakes}</p>
+              <p className="font-bold text-[var(--primary)] text-sm md:text-base">{country.facts.intakes}</p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-gray-500 mb-1">
                 <Briefcase className="w-4 h-4" />
                 <span className="text-xs font-semibold uppercase tracking-wider">Post-Study</span>
               </div>
-              <p className="font-bold text-[var(--primary)]">{country.facts.postStudyOptions}</p>
+              <p className="font-bold text-[var(--primary)] text-sm md:text-base break-words">{country.facts.postStudyOptions}</p>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default async function CountryDetailPage({ params }: Props) {
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
             
             {/* Main Content Column */}
             <div className="lg:col-span-2 space-y-12">
@@ -137,7 +137,7 @@ export default async function CountryDetailPage({ params }: Props) {
                 </div>
               </div>
               
-              <div className="bg-blue-50 border border-blue-100 rounded-xl p-8">
+              <div className="bg-blue-50 border border-blue-100 rounded-xl p-5 md:p-8">
                 <h3 className="text-xl font-bold text-blue-900 mb-3">Disclaimer</h3>
                 <p className="text-blue-800 text-sm leading-relaxed">
                   The tuition fees, living costs, and post-study work visa rules mentioned are approximate guidelines and subject to change based on university policies and government immigration laws. 

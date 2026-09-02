@@ -9,13 +9,13 @@ export const metadata = {
 export default function VisaGuidancePage() {
   return (
     <div className="bg-white min-h-screen">
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-[var(--background)]">
+      <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 bg-[var(--background)]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--primary)] mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--primary)] mb-4">
               Expert Visa Guidance.
             </h1>
-            <p className="text-lg md:text-xl text-[var(--muted)] leading-relaxed">
+            <p className="text-base md:text-lg text-[var(--muted)] leading-relaxed">
               We help you prepare a clear, complete, and accurate application to maximize your chances of a successful visa outcome.
             </p>
           </div>
