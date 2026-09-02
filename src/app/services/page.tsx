@@ -19,13 +19,13 @@ export default function ServicesPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-[var(--background)]">
+      <section className="relative pt-24 pb-8 md:pt-28 md:pb-12 bg-[var(--background)]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--primary)] mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--primary)] mb-4">
               Your Journey to Study Abroad.
             </h1>
-            <p className="text-lg md:text-xl text-[var(--muted)] leading-relaxed">
+            <p className="text-base md:text-lg text-[var(--muted)] leading-relaxed">
               We provide comprehensive end-to-end support. From the moment you decide to study abroad until you successfully settle in your dream country.
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Journey Timeline */}
-      <section className="py-20 md:py-32 bg-gray-50/30 relative">
+      <section className="py-12 md:py-16 bg-gray-50/30 relative">
         <div className="container mx-auto px-4 md:px-6">
           
           <div className="max-w-5xl mx-auto">
