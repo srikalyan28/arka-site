@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { submitLead } from "@/actions/leadActions";
 import { CheckCircle2, Loader2 } from "lucide-react";
+import { allCountries } from "@/data/allCountries";
 
 export default function ConsultationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,14 +76,9 @@ export default function ConsultationForm() {
           <label htmlFor="preferredCountry" className="text-sm font-medium text-gray-700">Interested In (Optional)</label>
           <select id="preferredCountry" name="preferredCountry" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-shadow bg-white">
             <option value="">Not decided yet</option>
-            <option value="UK">United Kingdom</option>
-            <option value="USA">USA</option>
-            <option value="Canada">Canada</option>
-            <option value="Australia">Australia</option>
-            <option value="Germany">Germany</option>
-            <option value="Ireland">Ireland</option>
-            <option value="New Zealand">New Zealand</option>
-            <option value="UAE">Dubai / UAE</option>
+            {allCountries.map((country) => (
+              <option key={country} value={country}>{country}</option>
+            ))}
           </select>
         </div>
       </div>
