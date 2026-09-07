@@ -80,6 +80,34 @@ export default function BookConsultationPage() {
                 </div>
               </div>
             </div>
+
+            {/* Google Map */}
+            <div className="bg-gray-200 rounded-2xl h-80 w-full overflow-hidden border border-gray-200 shadow-sm relative group">
+              <iframe
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ border: 0 }}
+                src="https://maps.google.com/maps?q=Arka+Abroad+Overseas+Education+Consultancy&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen
+                aria-hidden="false"
+                tabIndex={0}
+                className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+              ></iframe>
+              
+              {/* Direct Link Overlay Button */}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center pointer-events-none">
+                <a 
+                  href="https://maps.app.goo.gl/8Gh6LPLrWT128mzP8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/90 backdrop-blur-sm text-[var(--primary)] font-bold text-sm px-6 py-3 rounded-full shadow-lg border border-gray-100 pointer-events-auto hover:bg-[var(--primary)] hover:text-white transition-colors duration-300 flex items-center gap-2"
+                >
+                  <MapPin className="w-4 h-4" />
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Lead Form (Right - 3 cols) */}
