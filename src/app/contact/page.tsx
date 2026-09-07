@@ -88,7 +88,7 @@ export default function ContactPage() {
                 height="100%"
                 frameBorder="0"
                 style={{ border: 0 }}
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(siteConfig.contact.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                src="https://maps.google.com/maps?q=Arka+Abroad+Overseas+Education+Consultancy&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 allowFullScreen
                 aria-hidden="false"
                 tabIndex={0}
