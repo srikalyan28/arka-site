@@ -30,7 +30,7 @@ export default async function CountryDetailPage({ params }: Props) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-40 md:pb-32 bg-[var(--primary)] text-white overflow-hidden">
+      <section className="w-full max-w-full relative pt-24 pb-16 md:pt-40 md:pb-32 bg-[var(--primary)] text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] z-0"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 z-0"></div>
         

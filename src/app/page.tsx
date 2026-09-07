@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* Credibility & Brands Strip */}
-      <section className="border-y border-gray-100 bg-white py-6 sm:py-12 overflow-hidden flex flex-col gap-6 sm:gap-12">
+      <section className="w-full max-w-full border-y border-gray-100 bg-white py-6 sm:py-12 overflow-hidden flex flex-col gap-6 sm:gap-12">
 
         {/* Universities Marquee */}
         <div className="flex w-max animate-marquee items-center group hover:[animation-play-state:paused]">

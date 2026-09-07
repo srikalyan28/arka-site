@@ -15,6 +15,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  userScalable: false,
 };
 
 export const metadata: Metadata = {
@@ -28,11 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased h-full`}>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-      </head>
-      <body className="min-h-full flex flex-col pt-[72px]">
+    <html lang="en" className={`${inter.variable} antialiased h-full w-full overflow-x-hidden`}>
+      <body className="min-h-full flex flex-col pt-[72px] w-full overflow-x-hidden">
         <Navbar />
         <main className="flex-1 overflow-x-hidden w-full">
           {children}
