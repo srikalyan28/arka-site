@@ -94,7 +94,7 @@ export default function ConsultationForm() {
             Submitting...
           </>
         ) : (
-          "Book My Counselling Session"
+          "Book Free Consultation"
         )}
       </button>
 
