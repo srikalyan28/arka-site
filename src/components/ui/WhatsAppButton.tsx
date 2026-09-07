@@ -12,10 +12,10 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#128C7E] hover:scale-110 transition-all duration-300 group"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#128C7E] hover:scale-110 transition-all duration-300 group"
       aria-label="Chat with us on WhatsApp"
     >
-      <MessageCircle className="w-9 h-9 md:w-12 md:h-12" />
+      <MessageCircle className="w-12 h-12 md:w-14 md:h-14" />
       
       {/* Tooltip */}
       <span className="absolute right-full mr-4 bg-white text-gray-800 px-3 py-1.5 rounded-lg shadow-md text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-gray-100">

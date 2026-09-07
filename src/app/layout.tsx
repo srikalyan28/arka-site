@@ -11,16 +11,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
-
 export const metadata: Metadata = {
   title: `${siteConfig.name} | Study Abroad & Overseas Education Consultancy`,
   description: siteConfig.description,
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
 };
 
 export default function RootLayout({
@@ -30,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased h-full w-full overflow-x-hidden`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+      </head>
       <body className="min-h-full flex flex-col pt-[72px] w-full overflow-x-hidden">
         <Navbar />
         <main className="flex-1 overflow-x-hidden w-full">
