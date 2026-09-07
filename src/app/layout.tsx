@@ -29,9 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased h-full`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+      </head>
       <body className="min-h-full flex flex-col pt-[72px]">
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 overflow-x-hidden w-full">
           {children}
         </main>
         <Footer />
