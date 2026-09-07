@@ -37,6 +37,7 @@ export default function Navbar() {
   ];
 
   return (
+    <>
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
@@ -104,54 +105,55 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-10 h-10" /> : <Menu className="w-10 h-10" />}
+          {isOpen ? <X className="w-16 h-16" /> : <Menu className="w-16 h-16" />}
         </button>
+      </div>
+    </header>
 
-        {/* Mobile Menu */}
-        <div
-          className={cn(
-            "fixed inset-0 bg-white z-40 flex flex-col pt-28 px-6 lg:hidden transition-transform duration-300 ease-in-out",
-            isOpen ? "translate-x-0" : "translate-x-full"
-          )}
-        >
-          <div className="flex flex-col gap-6 overflow-y-auto pb-32">
-            {mainLinks.map((link) => (
+    {/* Mobile Menu */}
+    <div
+      className={cn(
+        "fixed inset-0 bg-white z-40 flex flex-col pt-28 px-6 lg:hidden transition-transform duration-300 ease-in-out",
+        isOpen ? "translate-x-0" : "translate-x-full"
+      )}
+    >
+      <div className="flex flex-col gap-6 overflow-y-auto pb-32">
+        {mainLinks.map((link) => (
+          <Link
+            key={link.name}
+            href={link.href}
+            className="text-2xl font-bold text-[var(--primary)] border-b border-gray-100 pb-4 block w-full"
+            onClick={closeMenu}
+          >
+            {link.name}
+          </Link>
+        ))}
+        <div className="pt-4">
+          <span className="text-base font-bold text-gray-400 uppercase tracking-wider mb-4 block">More Resources</span>
+          <div className="flex flex-col gap-5">
+            {moreLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-2xl font-bold text-[var(--primary)] border-b border-gray-100 pb-4 block w-full"
+                className="text-xl font-medium text-gray-600 block w-full"
                 onClick={closeMenu}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4">
-              <span className="text-base font-bold text-gray-400 uppercase tracking-wider mb-4 block">More Resources</span>
-              <div className="flex flex-col gap-5">
-                {moreLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-xl font-medium text-gray-600 block w-full"
-                    onClick={closeMenu}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 w-full p-6 bg-white border-t border-gray-100 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
-            <Link
-              href="/book-consultation"
-              className="flex justify-center bg-[var(--accent)] text-white px-5 py-4 rounded-xl font-bold text-lg hover:bg-yellow-600 transition-colors shadow-md w-full text-center"
-              onClick={closeMenu}
-            >
-              Book Free Counselling
-            </Link>
           </div>
         </div>
       </div>
-    </header>
+      <div className="absolute bottom-0 left-0 w-full p-6 bg-white border-t border-gray-100 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+        <Link
+          href="/book-consultation"
+          className="flex justify-center bg-[var(--accent)] text-white px-5 py-4 rounded-xl font-bold text-lg hover:bg-yellow-600 transition-colors shadow-md w-full text-center"
+          onClick={closeMenu}
+        >
+          Book Free Counselling
+        </Link>
+      </div>
+    </div>
+    </>
   );
 }
