@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, GraduationCap, PenTool, Landmark, PlaneTakeoff, Plane, BookOpen, Compass, Globe2 } from "lucide-react";
 import { countries } from "@/data/countries";
+import ClientLogo from "@/components/ui/ClientLogo";
 
 export default function Home() {
   return (
@@ -107,19 +108,7 @@ export default function Home() {
                 { name: 'ETH Zurich', domain: 'ethz.ch' }
               ].map((uni) => (
                 <div key={uni.name} className="flex items-center mx-8 md:mx-16">
-                  <div className="relative flex items-center justify-center h-12 md:h-16 w-32 md:w-40 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={`https://logo.clearbit.com/${uni.domain}`}
-                      alt={`${uni.name} Logo`}
-                      className="max-h-full max-w-full object-contain drop-shadow-sm"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                        (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
-                      }}
-                    />
-                    <span className="hidden font-extrabold text-gray-800 whitespace-nowrap text-xl">{uni.name}</span>
-                  </div>
+                  <ClientLogo domain={uni.domain} name={uni.name} />
                 </div>
               ))}
             </div>
