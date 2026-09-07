@@ -93,13 +93,33 @@ export default function Home() {
       <section className="w-full max-w-full border-y border-gray-100 bg-white py-6 sm:py-12 overflow-hidden flex flex-col gap-6 sm:gap-12">
 
         {/* Universities Marquee */}
-        <div className="flex w-max animate-marquee items-center group hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee items-center group hover:[animation-play-state:paused] py-4">
           {[...Array(6)].map((_, i) => (
             <div key={i} className="flex flex-shrink-0 items-center justify-around px-4">
-              {['Harvard University', 'Oxford University', 'Stanford University', 'MIT', 'University of Toronto', 'Imperial College London', 'University of Melbourne', 'ETH Zurich'].map((uni) => (
-                <div key={uni} className="flex items-center gap-8 mx-4 md:mx-8">
-                  <span className="text-base sm:text-xl md:text-2xl font-extrabold text-gray-800 whitespace-nowrap">{uni}</span>
-                  <span className="text-[var(--accent)] text-2xl">•</span>
+              {[
+                { name: 'Harvard University', domain: 'harvard.edu' },
+                { name: 'Oxford University', domain: 'ox.ac.uk' },
+                { name: 'Stanford University', domain: 'stanford.edu' },
+                { name: 'MIT', domain: 'mit.edu' },
+                { name: 'University of Toronto', domain: 'utoronto.ca' },
+                { name: 'Imperial College London', domain: 'imperial.ac.uk' },
+                { name: 'University of Melbourne', domain: 'unimelb.edu.au' },
+                { name: 'ETH Zurich', domain: 'ethz.ch' }
+              ].map((uni) => (
+                <div key={uni.name} className="flex items-center mx-8 md:mx-16">
+                  <div className="relative flex items-center justify-center h-12 md:h-16 w-32 md:w-40 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`https://logo.clearbit.com/${uni.domain}`}
+                      alt={`${uni.name} Logo`}
+                      className="max-h-full max-w-full object-contain drop-shadow-sm"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                        (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                      }}
+                    />
+                    <span className="hidden font-extrabold text-gray-800 whitespace-nowrap text-xl">{uni.name}</span>
+                  </div>
                 </div>
               ))}
             </div>
