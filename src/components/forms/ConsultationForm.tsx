@@ -62,15 +62,15 @@ export default function ConsultationForm() {
       <div className="space-y-5 mb-8">
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-gray-700">Full Name *</label>
-          <input required type="text" id="name" name="name" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-shadow" placeholder="John Doe" />
+          <input required type="text" id="name" name="name" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-shadow" placeholder="Enter your full name" />
         </div>
         <div className="space-y-2">
           <label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number *</label>
-          <input required type="tel" id="phone" name="phone" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-shadow" placeholder="+91 98765 43210" />
+          <input required type="tel" id="phone" name="phone" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-shadow" placeholder="Enter your phone number" />
         </div>
         <div className="space-y-2">
           <label htmlFor="email" className="text-sm font-medium text-gray-700">Email Address *</label>
-          <input required type="email" id="email" name="email" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-shadow" placeholder="john@example.com" />
+          <input required type="email" id="email" name="email" className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-shadow" placeholder="Enter your email address" />
         </div>
         <div className="space-y-2">
           <label htmlFor="preferredCountry" className="text-sm font-medium text-gray-700">Interested In (Optional)</label>
