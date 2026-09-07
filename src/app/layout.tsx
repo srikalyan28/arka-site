@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import PopupConsultation from "@/components/ui/PopupConsultation";
 import { siteConfig } from "@/data/siteConfig";
 
 const inter = Inter({
@@ -34,6 +35,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
+        <PopupConsultation />
       </body>
     </html>
   );
