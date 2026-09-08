@@ -30,7 +30,7 @@ export const faqs = [
     questions: [
       {
         question: "Does Arka Abroad guarantee my visa approval?",
-        answer: "No. Visa decisions are solely at the discretion of the respective country's immigration authorities. However, we ensure your application is complete, accurate, and presented professionally to maximize your chances of approval."
+        answer: "Yes, absolutely! We take full responsibility for getting your visa confirmed. Our expert team handles your entire application meticulously from start to finish to ensure a successful outcome."
       }
     ]
   }
