@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { CheckCircle2, ShieldAlert } from "lucide-react";
 
-export const metadata = {
-  title: "Visa Guidance | ARKA ABROAD",
-  description: "Comprehensive support for your student visa application.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Visa Guidance",
+  description: "Get comprehensive student visa assistance. Our expert consultants guide you through F1, UK, Canada, and Australia study visa processes.",
+  keywords: ["Student visa assistance", "F1 visa guidance USA", "UK student visa consultants", "Canada study permit help", "Australia subclass 500 visa"],
 };
 
 export default function VisaGuidancePage() {

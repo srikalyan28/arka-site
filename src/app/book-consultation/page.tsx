@@ -2,9 +2,12 @@ import { siteConfig } from "@/data/siteConfig";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 
-export const metadata = {
-  title: "Book Free Counselling | ARKA ABROAD",
-  description: "Schedule a free consultation with our expert study abroad counsellors.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Book Free Counselling",
+  description: "Book a free overseas education consultation with Arka Abroad's expert study abroad counsellors today.",
+  keywords: ["Book overseas education consultation", "free study abroad counselling", "speak to education advisor", "study abroad consultants appointment"],
 };
 
 export default function BookConsultationPage() {

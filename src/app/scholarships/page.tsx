@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { Award, BookOpen, GraduationCap, DollarSign } from "lucide-react";
 
-export const metadata = {
-  title: "Scholarships & Financial Aid | ARKA ABROAD",
-  description: "Make your international education more accessible with our scholarship guidance.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Scholarships & Financial Aid",
+  description: "Discover merit-based scholarships and financial aid for Indian students studying abroad. Get expert scholarship assistance.",
+  keywords: ["Study abroad scholarships for Indian students", "Merit-based international scholarships", "Financial aid for overseas education", "Scholarship assistance consultancy"],
 };
 
 export default function ScholarshipsPage() {

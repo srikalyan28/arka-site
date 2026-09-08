@@ -3,9 +3,12 @@ import { CheckCircle, Compass, FileSignature, Landmark, PlaneTakeoff } from "luc
 import { servicePhases } from "@/data/services";
 import Image from "next/image";
 
-export const metadata = {
-  title: "Our Services | ARKA ABROAD",
-  description: "Comprehensive guidance for international education from university selection to pre-departure.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description: "Comprehensive overseas education services including university selection, SOP writing, application assistance, and visa guidance.",
+  keywords: ["overseas education services", "study abroad application assistance", "university selection guidance", "SOP writing services for study abroad", "interview preparation for international universities"],
 };
 
 const iconMap: Record<string, React.ReactNode> = {

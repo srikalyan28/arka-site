@@ -2,9 +2,12 @@ import { siteConfig } from "@/data/siteConfig";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 
-export const metadata = {
-  title: "Contact Us | ARKA ABROAD",
-  description: "Get in touch with Arka Abroad for your overseas education queries.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Contact Arka Abroad to book your overseas education consultation today. Speak to our expert study abroad consultants in Hyderabad.",
+  keywords: ["Contact Arka Abroad", "book overseas education consultation", "study abroad consultants near me", "speak to education advisor"],
 };
 
 export default function ContactPage() {

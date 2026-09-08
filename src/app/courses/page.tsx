@@ -2,9 +2,12 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, Briefcase, Cog, HeartPulse, Laptop, Palette, Scale } from "lucide-react";
 import { courses } from "@/data/courses";
 
-export const metadata = {
-  title: "Find Your Course | ARKA ABROAD",
-  description: "Discover the right program for your future career across top international universities.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Find Your Course",
+  description: "Discover the right study abroad program for your future career. We help you choose top masters, bachelors, STEM, and MBA courses overseas.",
+  keywords: ["Top courses to study abroad", "Masters programs abroad", "STEM courses overseas", "MBA abroad consultancy", "international university programs"],
 };
 
 const iconMap: Record<string, React.ReactNode> = {

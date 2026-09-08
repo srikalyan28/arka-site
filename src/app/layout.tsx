@@ -12,10 +12,34 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Study Abroad & Overseas Education Consultancy`,
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} | Study Abroad & Overseas Education Consultancy`,
+    template: `%s | ${siteConfig.name}`,
+  },
   description: siteConfig.description,
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+  keywords: siteConfig.keywords,
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteConfig.url,
+    title: `${siteConfig.name} | Study Abroad & Overseas Education Consultancy`,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} | Study Abroad & Overseas Education Consultancy`,
+    description: siteConfig.description,
+  },
 };
 
 export default function RootLayout({

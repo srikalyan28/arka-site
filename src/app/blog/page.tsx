@@ -2,9 +2,12 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { blogs } from "@/data/blogs";
 
-export const metadata = {
-  title: "Blog | ARKA ABROAD",
-  description: "Insights, guides, and news about studying abroad.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Read the latest insights, guides, and news about studying abroad, international universities, and student life.",
+  keywords: ["Study abroad blog", "overseas education news", "international student guide", "study abroad tips"],
 };
 
 export default function BlogPage() {

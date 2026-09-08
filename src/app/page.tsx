@@ -3,6 +3,13 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, GraduationCap, PenTool, Landmark, PlaneTakeoff, Plane, BookOpen, Compass, Globe2 } from "lucide-react";
 import { countries } from "@/data/countries";
 import ClientLogo from "@/components/ui/ClientLogo";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Arka Abroad | Premier Overseas Education Consultancy",
+  description: "Arka Abroad is the best overseas education consultancy in Hyderabad, helping students study in the USA, UK, Canada, and Australia.",
+  keywords: ["Best overseas education consultants", "Study abroad consultancy", "International student advisors", "Study overseas experts", "Arka Abroad"],
+};
 
 export default function Home() {
   return (

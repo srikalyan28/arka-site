@@ -4,9 +4,12 @@ import { siteConfig } from "@/data/siteConfig";
 import { team } from "@/data/team";
 import { Target, Heart, Shield, Award } from "lucide-react";
 
-export const metadata = {
-  title: "About Us | ARKA ABROAD",
-  description: "Helping students turn global ambitions into real opportunities.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about Arka Abroad, a trusted overseas education consultancy in Hyderabad. We guide students to study abroad in the UK, USA, Canada, and more.",
+  keywords: ["About Arka Abroad", "trusted study abroad advisors", "educational consultancy profile", "overseas education experts Hyderabad"],
 };
 
 export default function AboutPage() {

@@ -1,7 +1,16 @@
 export const siteConfig = {
   name: "ARKA ABROAD",
-  description: "Explore universities, courses and study opportunities abroad with guidance from application to visa and beyond.",
+  description: "Explore universities, courses and study opportunities abroad with guidance from application to visa and beyond. Top overseas education consultancy in Hyderabad.",
   url: "https://arkaabroad.com", // Placeholder
+  keywords: [
+    "Overseas Education Consultancy in Hyderabad",
+    "Best Study Abroad Consultants",
+    "Study Abroad in UK from Hyderabad",
+    "Study Abroad in USA",
+    "Higher Education Abroad",
+    "Top Overseas Consultants in ECIL AS Rao Nagar",
+    "Arka Abroad Consultancy",
+  ],
   contact: {
     email: "arkaabroad@gmail.com",
     phones: ["+91 9701538222", "+91 9704168444", "+91 7093599945"],

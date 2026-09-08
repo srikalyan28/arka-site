@@ -3,9 +3,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { countries } from "@/data/countries";
 
-export const metadata = {
-  title: "Study Countries | ARKA ABROAD",
-  description: "Explore opportunities across some of the world's leading Study Countries with Arka Abroad.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Study Countries",
+  description: "Explore study abroad opportunities in the USA, UK, Canada, Australia, and more with Arka Abroad. Find the best countries for Indian students.",
+  keywords: ["Study in USA for Indian students", "Study in UK consultancy", "Study in Canada from Hyderabad", "Study in Australia requirements", "Best countries to study abroad"],
 };
 
 export default function CountriesPage() {
