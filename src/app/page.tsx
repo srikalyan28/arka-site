@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, GraduationCap, PenTool, Landmark, PlaneTakeoff, Plane, BookOpen, Compass, Globe2 } from "lucide-react";
 import { countries } from "@/data/countries";
 import ClientLogo from "@/components/ui/ClientLogo";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-            <div className="flex flex-col gap-6 max-w-2xl">
+            <ScrollReveal animation="slideLeft" className="flex flex-col gap-6 max-w-2xl">
               <div className="mb-2">
                 <Image src="/logo-transparent.png" alt="ARKA ABROAD Logo" width={350} height={350} className="w-48 md:w-72 h-auto object-contain drop-shadow-2xl" priority />
               </div>
@@ -67,8 +68,8 @@ export default function Home() {
                   Explore Countries
                 </Link>
               </div>
-            </div>
-            <div className="relative">
+            </ScrollReveal>
+            <ScrollReveal animation="zoomIn" delay={0.2} className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-[var(--primary)]/10 to-transparent rounded-3xl -m-4"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] w-full group">
                 <Image
@@ -92,7 +93,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -173,46 +174,49 @@ export default function Home() {
       {/* Countries Section */}
       <section className="py-20 md:py-28 bg-transparent">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <ScrollReveal animation="bounceDrop" className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">Where do you want to study?</h2>
             <p className="text-lg text-[var(--muted)]">Explore opportunities across some of the world&apos;s leading study countries.</p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6">
-            {countries.slice(0, 8).map((country) => (
-              <Link
-                key={country.id}
-                href={`/countries/${country.slug}`}
-                className="group relative h-40 sm:h-80 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
-              >
-                <Image
-                  src={country.image}
-                  alt={`Study in ${country.name}`}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-                <div className="absolute inset-0 z-20 p-3 sm:p-6 flex flex-col justify-end">
-                  <h3 className="text-base sm:text-2xl font-bold text-white mb-1 sm:mb-2 transform group-hover:-translate-y-2 transition-transform duration-300 leading-tight">{country.name}</h3>
-                  <div className="hidden sm:flex items-center text-white/90 font-medium text-sm transform opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300">
-                    Explore country
-                    <ArrowRight className="ml-2 w-4 h-4" />
+            {countries.slice(0, 8).map((country, idx) => (
+              <ScrollReveal key={country.id} animation="slideUp" delay={idx * 0.1}>
+                <Link
+                  href={`/countries/${country.slug}`}
+                  className="group relative block h-40 sm:h-80 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                >
+                  <Image
+                    src={country.image}
+                    alt={`Study in ${country.name}`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
+                  <div className="absolute inset-0 z-20 p-3 sm:p-6 flex flex-col justify-end">
+                    <h3 className="text-base sm:text-2xl font-bold text-white mb-1 sm:mb-2 transform group-hover:-translate-y-2 transition-transform duration-300 leading-tight">{country.name}</h3>
+                    <div className="hidden sm:flex items-center text-white/90 font-medium text-sm transform opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300">
+                      Explore country
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </ScrollReveal>
             ))}
             {/* 9th item: Explore All Countries button for mobile only (fills the empty spot in 3x3 grid) */}
-            <Link
-              href="/countries"
-              className="flex sm:hidden flex-col items-center justify-center h-40 rounded-xl bg-gray-50 border-2 border-dashed border-gray-200 hover:border-[var(--primary)] hover:bg-gray-100 transition-colors shadow-sm text-center p-3 group"
-            >
-              <div className="w-10 h-10 rounded-full bg-[var(--primary)]/10 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <ArrowRight className="w-5 h-5 text-[var(--primary)]" />
-              </div>
-              <span className="text-sm font-semibold text-[var(--primary)]">Explore All</span>
-              <span className="text-xs text-gray-500">Countries</span>
-            </Link>
+            <ScrollReveal animation="slideUp" delay={0.8} className="flex sm:hidden">
+              <Link
+                href="/countries"
+                className="w-full flex flex-col items-center justify-center h-40 rounded-xl bg-gray-50 border-2 border-dashed border-gray-200 hover:border-[var(--primary)] hover:bg-gray-100 transition-colors shadow-sm text-center p-3 group"
+              >
+                <div className="w-10 h-10 rounded-full bg-[var(--primary)]/10 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <ArrowRight className="w-5 h-5 text-[var(--primary)]" />
+                </div>
+                <span className="text-sm font-semibold text-[var(--primary)]">Explore All</span>
+                <span className="text-xs text-gray-500">Countries</span>
+              </Link>
+            </ScrollReveal>
           </div>
 
           {/* Desktop Explore All button (below the grid) */}
@@ -231,10 +235,10 @@ export default function Home() {
       {/* Services Overview */}
       <section className="py-20 md:py-28 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <ScrollReveal animation="bounceDrop" className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">Comprehensive Support</h2>
             <p className="text-lg text-[var(--muted)]">Expert guidance at every step of your international education journey.</p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
@@ -243,14 +247,16 @@ export default function Home() {
               { icon: Landmark, title: "Visa Processing", desc: "Hassle-free visa documentation and guidance." },
               { icon: PlaneTakeoff, title: "Pre and Post Departure", desc: "Support from getting ready to settling into your new life abroad." }
             ].map((feature, idx) => (
-              <div key={idx} className="group relative p-8 rounded-3xl bg-gray-50 hover:bg-[var(--primary)] transition-all duration-500 overflow-hidden text-center flex flex-col items-center shadow-sm hover:shadow-xl">
-                <div className="absolute top-0 right-0 -mt-8 -mr-8 w-32 h-32 bg-gradient-to-br from-[var(--accent)]/20 to-transparent rounded-full blur-2xl group-hover:opacity-100 opacity-0 transition-opacity duration-700"></div>
-                <div className="relative z-10 w-16 h-16 bg-white text-[var(--primary)] rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:text-[var(--accent)] transition-all duration-300">
-                  <feature.icon className="w-8 h-8" />
+              <ScrollReveal key={idx} animation="slideUp" delay={idx * 0.15}>
+                <div className="group h-full relative p-8 rounded-3xl bg-gray-50 hover:bg-[var(--primary)] transition-all duration-500 overflow-hidden text-center flex flex-col items-center shadow-sm hover:shadow-xl">
+                  <div className="absolute top-0 right-0 -mt-8 -mr-8 w-32 h-32 bg-gradient-to-br from-[var(--accent)]/20 to-transparent rounded-full blur-2xl group-hover:opacity-100 opacity-0 transition-opacity duration-700"></div>
+                  <div className="relative z-10 w-16 h-16 bg-white text-[var(--primary)] rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:text-[var(--accent)] transition-all duration-300">
+                    <feature.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="relative z-10 text-xl font-bold text-[var(--primary)] group-hover:text-white mb-3 transition-colors duration-300">{feature.title}</h3>
+                  <p className="relative z-10 text-gray-500 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{feature.desc}</p>
                 </div>
-                <h3 className="relative z-10 text-xl font-bold text-[var(--primary)] group-hover:text-white mb-3 transition-colors duration-300">{feature.title}</h3>
-                <p className="relative z-10 text-gray-500 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{feature.desc}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
           <div className="mt-16 text-center relative z-10">

@@ -1,6 +1,7 @@
 import { siteConfig } from "@/data/siteConfig";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import ConsultationForm from "@/components/forms/ConsultationForm";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 import { Metadata } from "next";
 
@@ -15,19 +16,19 @@ export default function ContactPage() {
     <div className="bg-[var(--background)] min-h-screen py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <ScrollReveal animation="slideUp" className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[var(--primary)] mb-6">
             We're here to help.
           </h1>
           <p className="text-lg text-[var(--muted)] leading-relaxed">
             Have a question about studying abroad? Reach out to us through any of the channels below, or request a callback by filling out the form.
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           
           {/* Contact Info (Left - 2 cols) */}
-          <div className="lg:col-span-2 space-y-8">
+          <ScrollReveal animation="slideLeft" className="lg:col-span-2 space-y-8">
             <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
               <h3 className="text-2xl font-bold text-[var(--primary)] mb-8">Contact Information</h3>
               
@@ -111,16 +112,16 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Lead Form (Right - 3 cols) */}
-          <div className="lg:col-span-3">
+          <ScrollReveal animation="slideRight" className="lg:col-span-3">
              <div className="mb-6">
                 <h2 className="text-2xl font-bold text-[var(--primary)]">Request Counselling</h2>
                 <p className="text-gray-500 text-sm mt-1">Fill out the form and we'll get back to you within 24 hours.</p>
              </div>
              <ConsultationForm />
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>
