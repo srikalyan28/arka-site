@@ -178,12 +178,12 @@ export default function Home() {
             <p className="text-lg text-[var(--muted)]">Explore opportunities across some of the world&apos;s leading study countries.</p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6">
             {countries.slice(0, 8).map((country) => (
               <Link
                 key={country.id}
                 href={`/countries/${country.slug}`}
-                className="group relative h-56 sm:h-80 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group relative h-40 sm:h-80 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
               >
                 <Image
                   src={country.image}
@@ -193,8 +193,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-                <div className="absolute inset-0 z-20 p-4 sm:p-6 flex flex-col justify-end">
-                  <h3 className="text-lg sm:text-2xl font-bold text-white mb-1 sm:mb-2 transform group-hover:-translate-y-2 transition-transform duration-300">{country.name}</h3>
+                <div className="absolute inset-0 z-20 p-3 sm:p-6 flex flex-col justify-end">
+                  <h3 className="text-base sm:text-2xl font-bold text-white mb-1 sm:mb-2 transform group-hover:-translate-y-2 transition-transform duration-300 leading-tight">{country.name}</h3>
                   <div className="hidden sm:flex items-center text-white/90 font-medium text-sm transform opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300">
                     Explore country
                     <ArrowRight className="ml-2 w-4 h-4" />
