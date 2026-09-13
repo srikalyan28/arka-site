@@ -25,11 +25,11 @@ export default function ContactPage() {
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-5 gap-12 items-start">
           
           {/* Contact Info (Left - 2 cols) */}
-          <ScrollReveal animation="slideLeft" className="lg:col-span-2 space-y-8">
-            <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <ScrollReveal animation="slideLeft" className="lg:col-span-2 flex flex-col-reverse lg:flex-col gap-8 w-full">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm w-full">
               <h3 className="text-2xl font-bold text-[var(--primary)] mb-8">Contact Information</h3>
               
               <div className="space-y-6">
@@ -115,7 +115,7 @@ export default function ContactPage() {
           </ScrollReveal>
 
           {/* Lead Form (Right - 3 cols) */}
-          <ScrollReveal animation="slideRight" className="lg:col-span-3">
+          <ScrollReveal animation="slideRight" className="lg:col-span-3 w-full">
              <div className="mb-6">
                 <h2 className="text-2xl font-bold text-[var(--primary)]">Request Counselling</h2>
                 <p className="text-gray-500 text-sm mt-1">Fill out the form and we'll get back to you within 24 hours.</p>
