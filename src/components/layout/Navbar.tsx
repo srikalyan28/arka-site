@@ -117,25 +117,25 @@ export default function Navbar() {
         isOpen ? "translate-x-0" : "translate-x-full"
       )}
     >
-      <div className="flex flex-col gap-6 overflow-y-auto pb-32">
+      <div className="flex flex-col gap-4 overflow-y-auto pb-28">
         {mainLinks.map((link) => (
           <Link
             key={link.name}
             href={link.href}
-            className="text-2xl font-bold text-[var(--primary)] border-b border-gray-100 pb-4 block w-full"
+            className="text-lg font-semibold text-[var(--primary)] border-b border-gray-50 pb-3 block w-full hover:text-[var(--accent)] transition-colors"
             onClick={closeMenu}
           >
             {link.name}
           </Link>
         ))}
-        <div className="pt-4">
-          <span className="text-base font-bold text-gray-400 uppercase tracking-wider mb-4 block">More Resources</span>
-          <div className="flex flex-col gap-5">
+        <div className="pt-2">
+          <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 block">More Resources</span>
+          <div className="flex flex-col gap-3">
             {moreLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-xl font-medium text-gray-600 block w-full"
+                className="text-base font-medium text-gray-500 hover:text-[var(--accent)] transition-colors block w-full"
                 onClick={closeMenu}
               >
                 {link.name}
@@ -144,10 +144,10 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full p-6 bg-white border-t border-gray-100 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+      <div className="absolute bottom-0 left-0 w-full p-5 bg-white border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
         <Link
           href="/book-consultation"
-          className="flex justify-center bg-[var(--accent)] text-white px-5 py-4 rounded-xl font-bold text-lg hover:bg-yellow-600 transition-colors shadow-md w-full text-center"
+          className="flex justify-center bg-[var(--accent)] text-white px-4 py-3 rounded-lg font-semibold text-base hover:bg-yellow-600 transition-colors shadow-sm w-full text-center"
           onClick={closeMenu}
         >
           Book Free Counselling
