@@ -5,7 +5,7 @@ export default function ClientLogo({ domain, name }: { domain: string; name: str
   const [hasError, setHasError] = useState(false);
 
   return (
-    <div className="relative flex items-center justify-center gap-3 h-12 md:h-16 w-max px-2 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+    <div className="relative flex items-center justify-center gap-3 h-12 md:h-16 w-max px-2 hover:scale-105 transition-all duration-300 cursor-pointer">
       {!hasError && (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img
