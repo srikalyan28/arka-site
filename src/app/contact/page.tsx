@@ -85,6 +85,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Map Placeholder */}
             <ScrollReveal animation="slideLeft" delay={0.2} className="w-full order-1 lg:order-2">
@@ -113,8 +114,9 @@ export default function ContactPage() {
                   Open in Google Maps
                 </a>
               </div>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
+        </div>
 
           {/* Lead Form (Right - 3 cols) */}
           <ScrollReveal animation="slideRight" className="lg:col-span-3 w-full order-1 lg:order-2">
