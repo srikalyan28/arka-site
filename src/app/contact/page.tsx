@@ -25,12 +25,50 @@ export default function ContactPage() {
           </p>
         </ScrollReveal>
 
-        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           
-          {/* Contact Info & Map (Left - 2 cols) */}
-          <div className="lg:col-span-2 flex flex-col gap-12 lg:gap-8 w-full order-2 lg:order-1">
-            <ScrollReveal animation="slideLeft" className="w-full order-2 lg:order-1">
-              <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm w-full">
+          {/* 1. Lead Form (Mobile: Top, Desktop: Right 3-cols) */}
+          <ScrollReveal animation="slideRight" className="lg:col-span-3 lg:col-start-3 lg:row-span-2 w-full">
+             <div className="mb-6">
+                <h2 className="text-2xl font-bold text-[var(--primary)]">Request Counselling</h2>
+                <p className="text-gray-500 text-sm mt-1">Fill out the form and we'll get back to you within 24 hours.</p>
+             </div>
+             <ConsultationForm />
+          </ScrollReveal>
+
+          {/* 2. Map Placeholder (Mobile: Middle, Desktop: Bottom Left 2-cols) */}
+          <ScrollReveal animation="slideLeft" delay={0.2} className="lg:col-span-2 lg:col-start-1 lg:row-start-2 w-full">
+            <div className="bg-gray-200 rounded-2xl h-80 w-full overflow-hidden border border-gray-200 shadow-sm relative group">
+              <iframe
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ border: 0 }}
+                src="https://maps.google.com/maps?q=Arka+Abroad+Overseas+Education+Consultancy&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                allowFullScreen
+                aria-hidden="false"
+                tabIndex={0}
+                className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+              ></iframe>
+              
+              {/* Direct Link Overlay Button */}
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center pointer-events-none">
+                <a 
+                  href="https://maps.app.goo.gl/8Gh6LPLrWT128mzP8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/90 backdrop-blur-sm text-[var(--primary)] font-bold text-sm px-6 py-3 rounded-full shadow-lg border border-gray-100 pointer-events-auto hover:bg-[var(--primary)] hover:text-white transition-colors duration-300 flex items-center gap-2"
+                >
+                  <MapPin className="w-4 h-4" />
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* 3. Contact Info (Mobile: Bottom, Desktop: Top Left 2-cols) */}
+          <ScrollReveal animation="slideLeft" className="lg:col-span-2 lg:col-start-1 lg:row-start-1 w-full h-full flex flex-col justify-start">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm w-full">
               <h3 className="text-2xl font-bold text-[var(--primary)] mb-8">Contact Information</h3>
               
               <div className="space-y-6">
@@ -85,46 +123,6 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            </ScrollReveal>
-
-            {/* Map Placeholder */}
-            <ScrollReveal animation="slideLeft" delay={0.2} className="w-full order-1 lg:order-2">
-              <div className="bg-gray-200 rounded-2xl h-80 w-full overflow-hidden border border-gray-200 shadow-sm relative group">
-              <iframe
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                style={{ border: 0 }}
-                src="https://maps.google.com/maps?q=Arka+Abroad+Overseas+Education+Consultancy&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                allowFullScreen
-                aria-hidden="false"
-                tabIndex={0}
-                className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
-              ></iframe>
-              
-              {/* Direct Link Overlay Button */}
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center pointer-events-none">
-                <a 
-                  href="https://maps.app.goo.gl/8Gh6LPLrWT128mzP8" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white/90 backdrop-blur-sm text-[var(--primary)] font-bold text-sm px-6 py-3 rounded-full shadow-lg border border-gray-100 pointer-events-auto hover:bg-[var(--primary)] hover:text-white transition-colors duration-300 flex items-center gap-2"
-                >
-                  <MapPin className="w-4 h-4" />
-                  Open in Google Maps
-                </a>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-
-          {/* Lead Form (Right - 3 cols) */}
-          <ScrollReveal animation="slideRight" className="lg:col-span-3 w-full order-1 lg:order-2">
-             <div className="mb-6">
-                <h2 className="text-2xl font-bold text-[var(--primary)]">Request Counselling</h2>
-                <p className="text-gray-500 text-sm mt-1">Fill out the form and we'll get back to you within 24 hours.</p>
-             </div>
-             <ConsultationForm />
           </ScrollReveal>
 
         </div>
