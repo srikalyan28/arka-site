@@ -25,11 +25,12 @@ export default function ContactPage() {
           </p>
         </ScrollReveal>
 
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-5 gap-12 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-12 items-start">
           
-          {/* Contact Info (Left - 2 cols) */}
-          <ScrollReveal animation="slideLeft" className="lg:col-span-2 flex flex-col-reverse lg:flex-col gap-8 w-full">
-            <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm w-full">
+          {/* Contact Info & Map (Left - 2 cols) */}
+          <div className="lg:col-span-2 flex flex-col gap-12 lg:gap-8 w-full order-2 lg:order-1">
+            <ScrollReveal animation="slideLeft" className="w-full order-2 lg:order-1">
+              <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm w-full">
               <h3 className="text-2xl font-bold text-[var(--primary)] mb-8">Contact Information</h3>
               
               <div className="space-y-6">
@@ -86,7 +87,8 @@ export default function ContactPage() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-2xl h-80 w-full overflow-hidden border border-gray-200 shadow-sm relative group">
+            <ScrollReveal animation="slideLeft" delay={0.2} className="w-full order-1 lg:order-2">
+              <div className="bg-gray-200 rounded-2xl h-80 w-full overflow-hidden border border-gray-200 shadow-sm relative group">
               <iframe
                 width="100%"
                 height="100%"
@@ -111,11 +113,11 @@ export default function ContactPage() {
                   Open in Google Maps
                 </a>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
 
           {/* Lead Form (Right - 3 cols) */}
-          <ScrollReveal animation="slideRight" className="lg:col-span-3 w-full">
+          <ScrollReveal animation="slideRight" className="lg:col-span-3 w-full order-1 lg:order-2">
              <div className="mb-6">
                 <h2 className="text-2xl font-bold text-[var(--primary)]">Request Counselling</h2>
                 <p className="text-gray-500 text-sm mt-1">Fill out the form and we'll get back to you within 24 hours.</p>
