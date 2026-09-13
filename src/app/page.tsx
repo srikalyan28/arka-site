@@ -202,6 +202,28 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+            {/* 9th item: Explore All Countries button for mobile only (fills the empty spot in 3x3 grid) */}
+            <Link
+              href="/countries"
+              className="flex sm:hidden flex-col items-center justify-center h-40 rounded-xl bg-gray-50 border-2 border-dashed border-gray-200 hover:border-[var(--primary)] hover:bg-gray-100 transition-colors shadow-sm text-center p-3 group"
+            >
+              <div className="w-10 h-10 rounded-full bg-[var(--primary)]/10 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                <ArrowRight className="w-5 h-5 text-[var(--primary)]" />
+              </div>
+              <span className="text-sm font-semibold text-[var(--primary)]">Explore All</span>
+              <span className="text-xs text-gray-500">Countries</span>
+            </Link>
+          </div>
+
+          {/* Desktop Explore All button (below the grid) */}
+          <div className="hidden sm:flex justify-center mt-12">
+            <Link
+              href="/countries"
+              className="inline-flex items-center justify-center bg-white text-[var(--primary)] border border-gray-200 px-8 py-4 rounded-md font-semibold text-lg hover:border-[var(--primary)] hover:shadow-md transition-all"
+            >
+              Explore All Countries
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

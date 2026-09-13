@@ -150,5 +150,62 @@ export const countries = [
       cities: ["Dubai", "Abu Dhabi", "Sharjah"],
       postStudyOptions: "Up to 2 years post-study work visa for outstanding students"
     }
+  },
+  {
+    id: "france",
+    name: "France",
+    slug: "france",
+    description: "Experience a rich culture, world-class business and arts programs, and a gateway to the European Union.",
+    image: "/images/destinations/france.jpg",
+    popularAreas: ["Fashion", "Business Management", "Arts", "Engineering"],
+    whyStudy: [
+      "France is home to some of the most prestigious business schools and arts institutions in the world. It offers a unique blend of high-quality education and a culturally immersive experience.",
+      "With affordable tuition fees at public universities and strong government subsidies for students (including housing assistance), France is a very cost-effective destination for international students."
+    ],
+    facts: {
+      tuition: "€2,770 - €10,000 / year",
+      duration: "3 Years (UG) / 2 Years (PG)",
+      intakes: "September, January",
+      cities: ["Paris", "Lyon", "Toulouse"],
+      postStudyOptions: "2-year post-study work visa for Master's graduates"
+    }
+  },
+  {
+    id: "singapore",
+    name: "Singapore",
+    slug: "singapore",
+    description: "A global financial hub offering a high standard of living, safety, and top-tier Asian universities.",
+    image: "/images/destinations/singapore.jpg",
+    popularAreas: ["Finance", "Technology", "Logistics", "Business"],
+    whyStudy: [
+      "Singapore boasts some of the highest-ranked universities in Asia and the world. Its education system is incredibly robust, heavily focused on research, innovation, and practical outcomes.",
+      "As a major economic hub, studying in Singapore provides unparalleled networking opportunities and access to leading multinational companies across Asia and globally."
+    ],
+    facts: {
+      tuition: "SGD 15,000 - 35,000 / year",
+      duration: "3-4 Years (UG) / 1-2 Years (PG)",
+      intakes: "August, January",
+      cities: ["Singapore"],
+      postStudyOptions: "1-3 years Long-Term Visit Pass"
+    }
+  },
+  {
+    id: "netherlands",
+    name: "Netherlands",
+    slug: "netherlands",
+    description: "Known for its innovative teaching methods, high English proficiency, and welcoming environment for international students.",
+    image: "/images/destinations/netherlands.jpg",
+    popularAreas: ["Engineering", "Business", "Water Management", "Design"],
+    whyStudy: [
+      "The Netherlands was the first non-English speaking country to offer study programs in English. Its highly interactive and student-centered teaching style encourages independent thinking and problem solving.",
+      "The country's open-minded and tolerant society makes it incredibly welcoming for international students. The 'Orientation Year' visa allows graduates to stay and look for work for a year after graduation."
+    ],
+    facts: {
+      tuition: "€8,000 - €20,000 / year",
+      duration: "3-4 Years (UG) / 1-2 Years (PG)",
+      intakes: "September, February",
+      cities: ["Amsterdam", "Rotterdam", "Utrecht"],
+      postStudyOptions: "1-year Orientation Year visa"
+    }
   }
 ];
